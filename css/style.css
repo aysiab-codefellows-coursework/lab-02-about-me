@@ -1,0 +1,25 @@
+h1 {
+    color: lightcoral;
+    font-family: cursive;
+}
+
+body {
+    background-color: peachpuff;
+}
+
+p {
+    width: 500px;
+}
+
+#about {
+    color: mediumpurple;
+    border-style: dotted;
+    border-color: lightcoral;
+}
+
+#animals {
+    color: lightslategray;
+    border-style: double;
+    border-color: lightcoral;
+    padding-top: 25px;
+}
