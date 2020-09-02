@@ -7,19 +7,14 @@ body {
     background-color: peachpuff;
 }
 
-p {
-    width: 500px;
+h3 {
+    color: lightslategray;
+    font-family: cursive;
 }
 
-#about {
-    color: mediumpurple;
+.master {
     border-style: dotted;
     border-color: lightcoral;
-}
-
-#animals {
-    color: lightslategray;
-    border-style: double;
-    border-color: lightcoral;
-    padding-top: 25px;
+    width: 300px;
+    padding: 25px;
 }
