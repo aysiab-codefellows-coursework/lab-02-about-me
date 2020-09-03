@@ -4,6 +4,7 @@ I build a basic web application that takes an input from a user for their name, 
 
 
 ### Author: Aysia Brown
+### Collaborated with: Tahmina Ringer 
 
 ### Links & Resources:
 - [GitHub Submission](https://github.com/aysiae/lab-02-about-me)
