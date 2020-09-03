@@ -34,51 +34,62 @@ alert("For the next question, you will get 4 opportunities to guess a number: 1-
 var randNum = Math.floor(Math.random() * 101);
 
 // loop to track 4 guesses of a random number 
-for(var i = 1; i <= 4; i++) {
-    var guess = prompt("Guess " + i + ": " );
-    if (guess == randNum) {
-        alert("You guessed the right number!");
-        //console.log("You guessed the right number!");
-        total = total + 1; 
-        break;
-    } else if (guess > randNum) {
-        alert("Too high!");
-        //console.log("That number is too high!");
-    } else {
-        alert("Too low!");
-        //console.log("That number is too low!");
+function guessNumber(random, max) {
+    for(var i = 1; i <= max; i++) {
+        var guess = prompt("Guess " + i + ": " );
+        if (guess == random) {
+            alert("You guessed the right number!");
+            //console.log("You guessed the right number!");
+            total = total + 1; 
+            break;
+        } else if (guess > random) {
+            alert("Too high!");
+            //console.log("That number is too high!");
+        } else {
+            alert("Too low!");
+            //console.log("That number is too low!");
+        }
     }
+    alert("The correct number was " + random);
 }
-alert("The correct number was " + randNum);
 
+guessNumber(randNum, 4);
 
 // guessing my favorite characters 
 // array holding all my favorite characters
-var faveChars = ["Hisoka","Sokka","Killua","Okuyasu","Kakyion","Terry","Rick","Korra","Linda","Happy"];
-var char;
-var count = 0;
 
-while(count < 6) {
-    var guess = prompt("Guess one of my favorite animated TV show characters:").toLowerCase();
-    for(var j = 0; j < faveChars.length; j++) {
-        if(guess === faveChars[j].toLowerCase()) {
-            char = guess;
-            break;
+function faveTvChars(chars, max){
+    var char;
+    var count = 0;
+    
+    while(count < max) {
+        var guess = prompt("Guess one of my favorite animated TV show characters:").toLowerCase();
+        for(var j = 0; j < chars.length; j++) {
+            if(guess === chars[j].toLowerCase()) {
+                char = guess;
+                break;
+            }
         }
+        if(char === guess) {
+            alert(guess + " is one of my favorite characters!");
+            //console.log(guess + "is one of my fave characters!");
+            total = total + 1; 
+            break;
+        } else {
+            alert("Sorry, that's not right :(");
+            //console.log("That's not quite right!");
+        }
+        count++;
     }
-    if(char === guess) {
-        alert(guess + " is one of my favorite characters!");
-        //console.log(guess + "is one of my fave characters!");
-        total = total + 1; 
-        break;
-    } else {
-        alert("Sorry, that's not right :(");
-        //console.log("That's not quite right!");
-    }
-    count++;
+    alert("My favorite characters are: " + chars);
+    alert("You got " + total + " out of 7 correct!");
+    //console.log("You got "+ total + " out of 7 correct!"); 
 }
-alert("My favorite characters are: " + faveChars);
+var faveChars = ["Hisoka","Sokka","Killua","Okuyasu","Kakyion","Terry","Rick","Korra","Linda","Happy"];
+
+faveTvChars(faveChars, 6);
+
 alert("You got " + total + " out of 7 correct!");
-//console.log("You got "+ total + " out of 7 correct!");
+//console.log("You got "+ total + " out of 7 correct!"); 
 
 alert("Thank you for playing " + user + "!");
