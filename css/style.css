@@ -3,6 +3,20 @@ h1 {
     font-family: cursive;
 }
 
+img {
+    border-style: dashed;
+    border-color: lightcoral;
+    padding: 25px;
+    margin: 100px;
+    float: right;
+}
+
+#link {
+    margin-left: 25px;
+    padding-left: 25px;
+    
+}
+
 body {
     background-color: peachpuff;
 }
@@ -17,4 +31,11 @@ h3 {
     border-color: lightcoral;
     width: 300px;
     padding: 25px;
+    float: left;
+}
+
+ul.master {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
 }
