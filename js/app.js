@@ -1,7 +1,6 @@
 "use strict";
 
 var user = prompt("Hi! What is your name?");
-//console.log("Welcome to my About Me " + user + "!");
 alert("Welcome " + user + "! Let's play a guessing game!")
 
 // keeps track of total correct guesses
@@ -11,11 +10,9 @@ var total = 0;
 function game (question, right, abr) {
     var answer = prompt(question).toLowerCase(); 
     if(answer == right || answer == abr) {
-        // console.log("Correct! You nailed it!");
         alert("Correct! You nailed it!");
         total = total + 1; 
     } else {
-        // console.log("Sorry... try again!");
         alert("Sorry... try again!");
     }
 }
@@ -39,15 +36,12 @@ function guessNumber(random, max) {
         var guess = prompt("Guess " + i + ": " );
         if (guess == random) {
             alert("You guessed the right number!");
-            //console.log("You guessed the right number!");
             total = total + 1; 
             break;
         } else if (guess > random) {
             alert("Too high!");
-            //console.log("That number is too high!");
         } else {
             alert("Too low!");
-            //console.log("That number is too low!");
         }
     }
     alert("The correct number was " + random);
@@ -72,24 +66,20 @@ function faveTvChars(chars, max){
         }
         if(char === guess) {
             alert(guess + " is one of my favorite characters!");
-            //console.log(guess + "is one of my fave characters!");
             total = total + 1; 
             break;
         } else {
             alert("Sorry, that's not right :(");
-            //console.log("That's not quite right!");
         }
         count++;
     }
     alert("My favorite characters are: " + chars);
     alert("You got " + total + " out of 7 correct!");
-    //console.log("You got "+ total + " out of 7 correct!"); 
 }
 var faveChars = ["Hisoka","Sokka","Killua","Okuyasu","Kakyion","Terry","Rick","Korra","Linda","Happy"];
 
 faveTvChars(faveChars, 6);
 
 alert("You got " + total + " out of 7 correct!");
-//console.log("You got "+ total + " out of 7 correct!"); 
 
 alert("Thank you for playing " + user + "!");
